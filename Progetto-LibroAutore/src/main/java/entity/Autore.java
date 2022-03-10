@@ -32,8 +32,6 @@ public class Autore {
 	
 	@OneToMany(mappedBy="autore")
 	private List<Libro> libri;
-	
-	//
 
 	public Integer getId() {
 		return id;
@@ -92,7 +90,7 @@ public class Autore {
 	}
 	
 	public String toString() {
-		return "Nome: "+nome+ ", cognome: "+cognome;
+		return "Nome: "+ nome+ ", Cognome: "+cognome +", Data di nascità: " + dataNascita + ", Luogo di nascità: " + luogoNascita + ", Codice fiscale: " + codFiscale + "\n";
 	}
 	
 }
