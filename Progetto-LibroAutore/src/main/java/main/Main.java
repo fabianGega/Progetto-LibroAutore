@@ -14,6 +14,8 @@ public class Main {
 		try {
 		AutoreDao autoreDao=new AutoreDao();
 		
+		///
+		
 		/* APRIAMO LA TRANSAZIONE */ 
 		EntityTransaction  transaction=autoreDao.getEntityManager().getTransaction();
 		transaction.begin();
