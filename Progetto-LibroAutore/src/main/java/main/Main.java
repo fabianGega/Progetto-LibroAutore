@@ -14,7 +14,7 @@ public class Main {
 		try {
 		AutoreDao autoreDao=new AutoreDao();
 		
-		/////S
+		/////S//
 		
 		/* APRIAMO LA TRANSAZIONE */ 
 		EntityTransaction  transaction=autoreDao.getEntityManager().getTransaction();
