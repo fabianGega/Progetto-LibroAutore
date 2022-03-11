@@ -14,7 +14,7 @@ import javax.persistence.OneToMany;
 public class Autore {
 	
 	@Id
-	@Column(name="id_autore", nullable = false)
+	@Column(name="id", nullable = false)
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
@@ -90,7 +90,7 @@ public class Autore {
 	}
 	
 	public String toString() {
-		return "Nome: "+ nome+ ", Cognome: "+cognome +", Data di nascità: " + dataNascita + ", Luogo di nascità: " + luogoNascita + ", Codice fiscale: " + codFiscale + "\n";
+		return "( Nome: "+ nome+ ", Cognome: "+cognome +", Data di nascità: " + dataNascita + ", Luogo di nascità: " + luogoNascita + ", Codice fiscale: " + codFiscale +" )" + "\n";
 	}
 	
 }

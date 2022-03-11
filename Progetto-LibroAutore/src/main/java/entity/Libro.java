@@ -18,8 +18,8 @@ public class Libro {
 	
 	private String titolo;
 	
-	@Column(name = "autore_id")
-	private Integer autoreId;
+//	@Column(name = "autore_id")
+//	private Integer autoreId;
 	
 	@Column(name = "codice_isbn")
 	private String codiceIsbn;
@@ -29,7 +29,7 @@ public class Libro {
 	private Double prezzo;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_autore")
+	@JoinColumn(name = "autore_id")
 	private Autore autore;
 
 	public Integer getId() {
@@ -46,14 +46,6 @@ public class Libro {
 
 	public void setTitolo(String titolo) {
 		this.titolo = titolo;
-	}
-
-	public Integer getAutoreId() {
-		return autoreId;
-	}
-
-	public void setAutoreId(Integer autoreId) {
-		this.autoreId = autoreId;
 	}
 
 	public String getCodiceIsbn() {
@@ -86,6 +78,10 @@ public class Libro {
 
 	public void setAutore(Autore autore) {
 		this.autore = autore;
+	}
+	
+	public String toString() {
+		return "( Titolo: "+ titolo+ ", Autore: "+ autore.getNome()+ " "+ autore.getCognome() + ", Genere: " + genere +", Codice ISBN: " + codiceIsbn + ", Prezzo: " + prezzo + " )" + "\n";
 	}
 	
 }
