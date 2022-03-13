@@ -34,24 +34,5 @@ public class AutoreDao extends GenericDao {
 		autore.setNome(nomeNuovo);
 		getEntityManager().merge(autore);
 	}
-	
-//	public List<ResponseJoin> findByJoin(){
-////		TypedQuery<Department> query 
-////	      = entityManager.createQuery(
-////	          "SELECT d FROM Employee e, Department d WHERE e.department = d", Department.class);
-////	    List<Department> resultList = query.getResultList();
-//		
-////		Query query = getEntityManager().createNativeQuery("select new ResponseJoin nome, cognome, titolo, genere from autore inner join libro on autore.id=libro.autore_id");
-////		List<ResponseJoin> joinInformation = query.getResultList();
-////	    return joinInformation;
-//		
-//		
-//		
-//		
-//	    
-//	    Query query = getEntityManager().createNativeQuery("select nome, cognome, titolo, genere from autore inner join libro on autore.id=libro.autore_id", ResponseJoin.class);
-//		List<ResponseJoin> joinInformation = query.getResultList();
-//	    return joinInformation;
-//	}
 
 }
