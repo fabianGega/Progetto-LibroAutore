@@ -18,9 +18,6 @@ public class Libro {
 	
 	private String titolo;
 	
-//	@Column(name = "autore_id")
-//	private Integer autoreId;
-	
 	@Column(name = "codice_isbn")
 	private String codiceIsbn;
 	

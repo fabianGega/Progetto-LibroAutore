@@ -3,15 +3,23 @@ package entity;
 import java.sql.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedNativeQuery;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
-public class Autore {
+@NamedQuery(
+		name="trovaTutti",
+		query = "select a from Autore a")         // Query findAll
+public class Autore {                             
 	
 	@Id
 	@Column(name="id", nullable = false)
@@ -30,7 +38,7 @@ public class Autore {
 	@Column(name = "cod_fiscale")
 	private String codFiscale;
 	
-	@OneToMany(mappedBy="autore")
+	@OneToMany(mappedBy="autore", cascade = CascadeType.ALL)
 	private List<Libro> libri;
 
 	public Integer getId() {
@@ -89,8 +97,11 @@ public class Autore {
 		this.libri = libri;
 	}
 	
+
 	public String toString() {
-		return "( Nome: "+ nome+ ", Cognome: "+cognome +", Data di nascità: " + dataNascita + ", Luogo di nascità: " + luogoNascita + ", Codice fiscale: " + codFiscale +" )" + "\n";
+		return "Nome: "+ nome+ ", Cognome: "+cognome +", Data di nascità: " + dataNascita + ", Luogo di nascità: " + luogoNascita + ", Codice fiscale: " + codFiscale +" )" + "\n";
 	}
+	
+	
 	
 }
