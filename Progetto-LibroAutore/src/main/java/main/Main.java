@@ -13,7 +13,7 @@ import dao.ResponseJoinDao;
 import dto.JoinLibroAutoreTo;
 import entity.Autore;
 import entity.Libro;
-import service.Service;
+import utility.Utility;
 
 public class Main {
 
@@ -43,7 +43,7 @@ public class Main {
 			try {
 				AutoreDao autoreDao=new AutoreDao();
 				LibroDao libroDao = new LibroDao();
-				Service service = new Service();
+				Utility utility = new Utility();
 				ResponseJoinDao responseJoinDao = new ResponseJoinDao();
 				
 				// apro la transazione 
@@ -91,7 +91,7 @@ public class Main {
 						//creo un oggetto Autore e lo salvo su database
 						Autore autore = new Autore();
 						
-						service.aggiungiAutore(autore);
+						utility.aggiungiAutore(autore);
 
 						break;
 					case 8:
@@ -108,7 +108,7 @@ public class Main {
 						} else {
 							Autore autoreNuovo = new Autore();
 							
-							service.aggiungiAutore(autoreNuovo);
+							utility.aggiungiAutore(autoreNuovo);
 							
 							libro.setAutore(autoreNuovo);
 						}

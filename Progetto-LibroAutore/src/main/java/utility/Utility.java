@@ -1,4 +1,4 @@
-package service;
+package utility;
 
 import java.sql.Date;
 import java.util.Scanner;
@@ -6,7 +6,7 @@ import java.util.Scanner;
 import dao.AutoreDao;
 import entity.Autore;
 
-public class Service {
+public class Utility {
 	
 	public void aggiungiAutore(Autore autore) {
 		Scanner input = new Scanner(System.in);
